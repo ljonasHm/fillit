@@ -21,11 +21,11 @@ SRC = ft_putstr.c ft_strcpy.c ft_strlen.c ft_putchar.c ft_strcmp.c ft_strdup.c \
 	 ft_putendl_fd.c ft_putnbr_fd.c ft_memalloc.c ft_memdel.c ft_strmapi.c ft_strsub.c \
 	ft_strjoin.c ft_strtrim.c ft_getlen.c ft_itoa.c ft_strsplit.c ft_countwords.c \
 	ft_getword.c ft_cleararr.c ft_clear.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
-	ft_lstadd.c ft_lstiter.c ft_lstmap.c
- 
+	ft_lstadd.c ft_lstiter.c ft_lstmap.c get_next_line.c
+
 OBJ	= $(SRC:%.c=%.o)
 
-FlAG = -Wall -Wextra -Werror 
+FlAG = -Wall -Wextra -Werror
 
 HEADER = ./libft.h
 

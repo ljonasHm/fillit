@@ -1,10 +1,10 @@
 NAME = fillit
-SRC = src/main.c src/fillit1.c ../get_next_line.c
-OBJ = main.o fillit1.o get_next_line.o
+SRC = src/main.c src/fillit1.c
+OBJ = main.o fillit1.o
 INCLUDES = includes/
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-LIBPATH = ../libft/libft.a
+LIBPATH = libft/libft.a
 all: $(NAME)
 
 $(NAME):

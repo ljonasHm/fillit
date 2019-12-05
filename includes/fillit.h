@@ -19,5 +19,9 @@
 # include <stdio.h> /*forbbiden*/
 
 int		ft_checkttrmn(char **ttrmn);
+int		ft_check1(char	**ttrmn);
+int		ft_check2(char	**ttrmn);
+int		ft_check3(char **ttrmn);
+int		ft_check4(char **ttrmn);
 
 #endif

@@ -16,7 +16,17 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <fcntl.h>
+# define BUFF_SIZE 5000
 
+typedef struct		s_gnl
+{
+	int				fd;
+	char			*stack;
+	struct s_gnl	*next;
+}					t_gnl;
+
+int					get_next_line(int fd, char **line);
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);

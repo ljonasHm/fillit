@@ -1,5 +1,4 @@
-	e ************************************************************************** */
-	gsphere.21-school.ru:intra/2019/activities/get_next_line/rrayne3
+
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
@@ -11,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 char	*check(char **pntr, char *stack)
 {
