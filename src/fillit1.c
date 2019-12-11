@@ -36,6 +36,8 @@ int		ft_check1(char	**ttrmn)
 		j = 0;
 		while (j < 4)
 		{
+			if (i <= 2 && ft_strchr(ttrmn[i], '#') != NULL && (ttrmn[i][0] == '.' || ttrmn[i][3] == '.') && ft_strchr(ttrmn[i+1], '#') == NULL)
+				return (0);
 			if (ttrmn[i][j] != '.' && ttrmn[i][j] != '#')
 				return (0);
 			j++;
@@ -126,36 +128,3 @@ int		ft_check4(char **ttrmn)
 	}
 	return (1);
 }
-
-/*int		ft_check3(char **ttrmn)
-{
-	int	i;
-	int j;
-	int a;
-	int b;
-
-	a = 5;
-	b = 5;
-	i = 0;
-	while (i < 4)
-	{
-		j = 0;
-		while (j < 4)
-		{
-			if (ttrmn[i][j] == '#' && a == 5 && b == 5)
-			{
-				a = i;
-				b = j;
-			}
-			printf("%d\n", a);
-			if (ttrmn[i][j] == '#')
-			{
-				if ((i - a > 1 || i - a < -1) && (j - b > 1 || j - b < -1))
-					return (0);
-			}
-			j++;
-		}
-		i++;
-	}
-	return (1);
-}*/
