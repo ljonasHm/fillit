@@ -6,55 +6,59 @@
 /*   By: ljonas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 14:18:13 by ljonas            #+#    #+#             */
-/*   Updated: 2019/12/05 14:18:15 by ljonas           ###   ########.fr       */
+/*   Updated: 2020/02/15 20:15:48 by rrayne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-int     main(int ac, char **av)
+int		ft_error_exit(int z, t_list *head)
 {
-    int     fd;
-    int     i;
-    char    *tt;
-    char    **ttrmn;
+	if (z == 0)
+	{
+		free(head);
+		ft_putstr("error\n");
+	}
+	else if (z == 1)
+		ft_putstr("error\n");
+	else if (z == 2)
+	{
+		free(head);
+		ft_putstr("error\n");
+	}
+	else if (z == -1 || z > 26)
+	{
+		ft_headfree(head);
+		ft_putstr("error\n");
+	}
+	return (0);
+}
 
-    ttrmn = NULL;
-    if (ac != 2)
-    {
-        ft_putstr("error\n");
-        return (0);
-    }
-    if (!(ttrmn = (char **)malloc(sizeof(char*) * 4)))
-    {
-        ft_putstr("error\n");
-        return (0);
-    }
-    fd = open(av[1], O_RDONLY);
-    i = 0;
-    while (get_next_line(fd, &tt))
-    {
-        ttrmn[i] = tt;
-        if (i == 3)
-        {
-            printf("%s\n", ttrmn[0]);
-            printf("%s\n", ttrmn[1]);
-            printf("%s\n", ttrmn[2]);
-            printf("%s\n", ttrmn[3]);
-            if (!(ft_checkttrmn(ttrmn)))
-            {
-                ft_putstr("error\n");
-                return (0);
-            }
-            get_next_line(fd, &tt);
-            if (tt[0] != '\0')
-            {
-                ft_putstr("error\n");
-                return (0);
-            }
-            i = -1;
-        }
-        i++;
-    }
-    return (0);
+int		main(int ac, char **av)
+{
+	int			fd;
+	int			q;
+	char		**ttrmn;
+	t_list		*head;
+
+	if (ac == 2)
+	{
+		if (!(head = (t_list *)malloc(sizeof(t_list))))
+			return (ft_error_exit(1, head));
+		if (!(ttrmn = (char **)malloc(sizeof(char *) * 4)))
+			return (ft_error_exit(2, head));
+		fd = open(av[1], O_RDONLY);
+		q = ft_gettrmn(ttrmn, head, fd);
+		free(ttrmn);
+		if (q == 0)
+			return (ft_error_exit(q, head));
+		if (q == -1 || q > 26)
+			return (ft_error_exit(q, head));
+		ft_placettrm(head, q);
+		ft_headfree(head);
+		close(fd);
+	}
+	else
+		ft_putstr("error\n");
+	return (0);
 }

@@ -1,4 +1,4 @@
-#tmap.c**************************************************************************** #
+# **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
@@ -6,7 +6,7 @@
 #    By: rrayne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/13 17:20:34 by rrayne            #+#    #+#              #
-#    Updated: 2019/09/28 17:56:56 by rrayne           ###   ########.fr        #
+#    Updated: 2020/02/13 18:10:43 by rrayne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,10 +22,10 @@ SRC = ft_putstr.c ft_strcpy.c ft_strlen.c ft_putchar.c ft_strcmp.c ft_strdup.c \
 	ft_strjoin.c ft_strtrim.c ft_getlen.c ft_itoa.c ft_strsplit.c ft_countwords.c \
 	ft_getword.c ft_cleararr.c ft_clear.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
 	ft_lstadd.c ft_lstiter.c ft_lstmap.c get_next_line.c
-
+ 
 OBJ	= $(SRC:%.c=%.o)
 
-FlAG = -Wall -Wextra -Werror
+FlAG = -Wall -Wextra -Werror 
 
 HEADER = ./libft.h
 

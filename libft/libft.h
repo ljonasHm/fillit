@@ -6,7 +6,7 @@
 /*   By: rrayne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 17:59:26 by rrayne            #+#    #+#             */
-/*   Updated: 2019/09/28 17:42:20 by rrayne           ###   ########.fr       */
+/*   Updated: 2020/02/15 20:09:40 by rrayne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,10 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdio.h>
 # include <fcntl.h>
 # define BUFF_SIZE 5000
 
-typedef struct		s_gnl
-{
-	int				fd;
-	char			*stack;
-	struct s_gnl	*next;
-}					t_gnl;
-
-int					get_next_line(int fd, char **line);
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
@@ -85,6 +78,14 @@ int					ft_countwords(char const *s, char c);
 int					ft_getword(const char *s, char c);
 void				ft_cleararr(char **mas, int size);
 char				*ft_clear(char const *s, char c, int i, char **mas);
+int					get_next_line(int fd, char **line);
+
+typedef struct		s_gnl
+{
+	int				fd;
+	char			*stack;
+	struct s_gnl	*next;
+}					t_gnl;
 
 typedef struct		s_list
 {
