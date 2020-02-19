@@ -6,11 +6,11 @@
 /*   By: ljonas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 16:44:16 by ljonas            #+#    #+#             */
-/*   Updated: 2020/02/13 18:14:54 by rrayne           ###   ########.fr       */
+/*   Updated: 2020/02/19 16:45:29 by ljonas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
+#include "fillit.h"
 
 void	ft_sqinit(t_mas *mas)
 {

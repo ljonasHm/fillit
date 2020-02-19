@@ -6,11 +6,11 @@
 /*   By: rrayne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 19:42:18 by rrayne            #+#    #+#             */
-/*   Updated: 2020/02/15 19:42:29 by rrayne           ###   ########.fr       */
+/*   Updated: 2020/02/19 16:44:37 by ljonas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
+#include "fillit.h"
 
 int			ft_checkgnl(int i, int g, int q, char **ttrmn)
 {

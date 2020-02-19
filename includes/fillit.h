@@ -6,14 +6,14 @@
 /*   By: ljonas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 14:17:58 by ljonas            #+#    #+#             */
-/*   Updated: 2020/02/15 20:44:47 by rrayne           ###   ########.fr       */
+/*   Updated: 2020/02/19 16:43:59 by ljonas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FILLIT_H
 # define FILLIT_H
 
-# include "../libft/libft.h"
+# include "libft.h"
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>

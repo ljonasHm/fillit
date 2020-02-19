@@ -6,11 +6,11 @@
 /*   By: ljonas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 15:01:46 by ljonas            #+#    #+#             */
-/*   Updated: 2020/02/13 18:43:02 by rrayne           ###   ########.fr       */
+/*   Updated: 2020/02/19 16:45:11 by ljonas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
+#include "fillit.h"
 
 int			ft_gettrmn(char **ttrmn, t_list *head, int fd)
 {

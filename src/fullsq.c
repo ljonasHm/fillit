@@ -6,11 +6,11 @@
 /*   By: rrayne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 19:46:50 by rrayne            #+#    #+#             */
-/*   Updated: 2020/02/15 19:47:04 by rrayne           ###   ########.fr       */
+/*   Updated: 2020/02/19 16:45:01 by ljonas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
+#include "fillit.h"
 
 int		ft_reshotka(t_mas *mas, t_ttpos *tmppos, int s)
 {

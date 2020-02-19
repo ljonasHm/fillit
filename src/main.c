@@ -6,11 +6,11 @@
 /*   By: ljonas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 14:18:13 by ljonas            #+#    #+#             */
-/*   Updated: 2020/02/15 20:15:48 by rrayne           ###   ########.fr       */
+/*   Updated: 2020/02/19 16:54:58 by ljonas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
+#include "fillit.h"
 
 int		ft_error_exit(int z, t_list *head)
 {
@@ -59,6 +59,6 @@ int		main(int ac, char **av)
 		close(fd);
 	}
 	else
-		ft_putstr("error\n");
+		ft_putstr("usage: ./fillit source_file\n");
 	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: ljonas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 14:48:24 by ljonas            #+#    #+#             */
-/*   Updated: 2020/02/13 18:23:47 by rrayne           ###   ########.fr       */
+/*   Updated: 2020/02/19 16:44:20 by ljonas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
+#include "fillit.h"
 
 int		ft_checkttrmn(char **ttrmn)
 {

@@ -6,11 +6,11 @@
 /*   By: rrayne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 19:34:42 by rrayne            #+#    #+#             */
-/*   Updated: 2020/02/15 19:36:04 by rrayne           ###   ########.fr       */
+/*   Updated: 2020/02/19 16:44:50 by ljonas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
+#include "fillit.h"
 
 void	ft_cleartt(char **ttrmn, int i)
 {
