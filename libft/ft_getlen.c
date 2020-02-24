@@ -15,14 +15,12 @@
 int		ft_getlen(int n)
 {
 	int				len;
-	unsigned int	nb;
 
 	len = 0;
 	if (n < 0)
 		len++;
 	if (n == 0)
 		return (1);
-	nb = (unsigned int)n;
 	while (n != 0)
 	{
 		n = n / 10;

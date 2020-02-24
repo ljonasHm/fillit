@@ -1,28 +1,29 @@
 NAME = fillit
-SRC = src/main.c src/check.c src/clear.c src/fullsq.c src/lstpos.c src/sq.c src/checkgnl.c
-OBJ = $(subst .c,.o,$(subst src/,,$(SRC)))
-INCLUDES = includes/
+SRC = main.c check.c clear.c fullsq.c lstpos.c sq.c checkgnl.c
+OBJ = $(SRC:.c=.o)
+LIB_DIR = libft
+INC_DIR = . libft
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-LIBPATH = libft/libft.a
+CFLAGS = -Wall -Wextra -Werror -c $(addprefix -I, $(INC_DIR))
+LIBFLAGS = -L $(LIB_DIR) -lft
+
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
-$(NAME): lib $(OBJ)
-	$(CC) $(CFLAGC) -o $(NAME) $(OBJ) -L libft -lft
+$(NAME): $(OBJ)
+	make -C $(LIB_DIR)
+	$(CC) -o $@ $^ $(LIBFLAGS)
 
-$(OBJ):
-	$(CC) $(CFLAGS) -c $(SRC) -Iincludes/ -Ilibft/
-
-lib:
-	make -C libft
+%.o: %.c
+	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	/bin/rm -rf $(OBJ)
-	make -C libft clean
+	make -C $(LIB_DIR) clean
+	/bin/rm -f $(OBJ)
 
 fclean: clean
-	/bin/rm -rf $(NAME)
-	make -C libft fclean
+	make -C $(LIB_DIR) fclean
+	/bin/rm -f $(NAME)
 
 re: fclean all
