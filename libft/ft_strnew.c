@@ -6,7 +6,7 @@
 /*   By: rrayne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 21:06:53 by rrayne            #+#    #+#             */
-/*   Updated: 2019/09/27 20:10:20 by rrayne           ###   ########.fr       */
+/*   Updated: 2020/02/24 15:41:14 by ljonas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char		*ft_strnew(size_t size)
 {
 	char	*str;
-	size_t		i;
+	size_t	i;
 
 	if (!(str = (char *)malloc(sizeof(char) * (size + 1))))
 		return (0);

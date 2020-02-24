@@ -6,7 +6,7 @@
 /*   By: rrayne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 20:49:34 by rrayne            #+#    #+#             */
-/*   Updated: 2019/09/27 15:29:07 by rrayne           ###   ########.fr       */
+/*   Updated: 2020/02/24 15:40:58 by ljonas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t				i;
+	size_t			i;
 	unsigned char	*p1;
 	unsigned char	*p2;
 

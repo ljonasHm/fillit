@@ -6,7 +6,7 @@
 /*   By: ljonas <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 14:18:13 by ljonas            #+#    #+#             */
-/*   Updated: 2020/02/24 14:49:09 by ljonas           ###   ########.fr       */
+/*   Updated: 2020/02/24 15:54:41 by ljonas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,12 @@ int		main(int ac, char **av)
 		if (!(ttrmn = (char **)malloc(sizeof(char *) * 4)))
 			return (ft_error_exit(0, NULL, head));
 		fd = open(av[1], O_RDONLY);
-		q = (int)read(fd, NULL, 0);
-		if (q == -1)
+		if (read(fd, NULL, 0) == -1)
 			return (ft_error_exit(2, ttrmn, head));
 		q = ft_gettrmn(ttrmn, head, fd);
 		free(ttrmn);
-		if (q == 0)
-			return (ft_error_exit(0, NULL, head));
-		if (q == -1 || q > 26)
-			return (ft_error_exit(0, NULL, head));
+		if (q == 0 || q == -1 || q > 26)
+			return (ft_error_exit(q, NULL, head));
 		ft_placettrm(head, q);
 		ft_headfree(head);
 		close(fd);

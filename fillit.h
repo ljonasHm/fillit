@@ -65,13 +65,12 @@ t_list			*ft_nextlst(t_list *tmp, t_list *head, t_mas *mas);
 void			ft_checkposx(t_ttpos *pos);
 void			ft_checkposy(t_ttpos *pos);
 void			ft_cordpl(t_ttpos *pos, char **ttrmn);
-int				ft_error_exit(int z, t_list *head);
+int				ft_error_exit(int z, char **ttrmn, t_list *head);
 int				ft_checkgnl(int i, int g, int q, char **ttrmn);
 int				ft_ultra_clear(int i, int q, char **ttrmn, char *tt);
 t_list			*ft_goodres(t_mas *mas, t_list *tmp, t_list *head, \
 							t_ttpos *tmppos);
 t_list			*ft_numi(t_list *tmp, t_ttpos *tmppos, t_mas *mas);
-int				ft_clearcheck(t_mas *mas, t_list *head);
 t_list			*ft_restreat(t_mas *mas, t_ttpos *tmppos, \
 							t_list *tmp, t_list *head);
 
